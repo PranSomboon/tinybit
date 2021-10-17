@@ -7,8 +7,10 @@ basic.forever(function () {
             Tinybit.CarCtrlSpeed(Tinybit.CarState.Car_Left, 93)
             if (!(disttant < 10)) {
                 break;
+Tinybit.RGB_Car_Big(Tinybit.enColor.Yellow)
             }
         }
+        Tinybit.RGB_Car_Big(Tinybit.enColor.OFF)
     } else {
         Tinybit.CarCtrlSpeed(Tinybit.CarState.Car_Run, 255)
     }
