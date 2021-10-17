@@ -6,12 +6,14 @@ basic.forever(function () {
         while (true) {
             Tinybit.CarCtrlSpeed(Tinybit.CarState.Car_Left, 93)
             if (!(disttant < 10)) {
-                Tinybit.RGB_Car_Big(Tinybit.enColor.Yellow)
                 break;
             }
         }
-        Tinybit.RGB_Car_Big(Tinybit.enColor.OFF)
     } else {
         Tinybit.CarCtrlSpeed(Tinybit.CarState.Car_Run, 255)
     }
+    led.plotBarGraph(
+    Tinybit.Ultrasonic_Car(),
+    0
+    )
 })
