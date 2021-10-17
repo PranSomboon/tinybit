@@ -8,8 +8,6 @@ basic.forever(function () {
                 break;
             }
         }
-    } else if (input.temperature() < 6) {
-        music.playMelody("C5 D A F F A D C5 ", 120)
     } else {
         Tinybit.CarCtrlSpeed(Tinybit.CarState.Car_Run, 255)
     }
