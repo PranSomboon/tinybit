@@ -5,7 +5,8 @@
         "core": "*",
         "radio": "*",
         "microphone": "*",
-        "Tinybit": "github:lzty634158/tiny-bit#8f45bf6695194ebfdaccaa03e774d1bcf7dde979"
+        "Tinybit": "github:lzty634158/tiny-bit#8f45bf6695194ebfdaccaa03e774d1bcf7dde979",
+        "MakerBit-IR-Receiver": "github:1010technologies/pxt-makerbit-ir-receiver#v1.5.14"
     },
     "files": [
         "main.blocks",
