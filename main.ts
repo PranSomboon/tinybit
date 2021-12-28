@@ -16,20 +16,21 @@ basic.forever(function () {
         }
     } else if (Tinybit.Ultrasonic_Car() < 35) {
         Tinybit.CarCtrl(Tinybit.CarState.Car_Run)
-        Tinybit.CarCtrlSpeed(Tinybit.CarState.Car_Run, 86)
+        Tinybit.CarCtrlSpeed(Tinybit.CarState.Car_Run, 56)
     } else if (Tinybit.Ultrasonic_Car() < 50) {
         Tinybit.CarCtrl(Tinybit.CarState.Car_Run)
-        Tinybit.CarCtrlSpeed(Tinybit.CarState.Car_Run, 103)
+        Tinybit.CarCtrlSpeed(Tinybit.CarState.Car_Run, 76)
     } else if (Tinybit.Ultrasonic_Car() < 60) {
         Tinybit.CarCtrl(Tinybit.CarState.Car_Run)
-        Tinybit.CarCtrlSpeed(Tinybit.CarState.Car_Run, 125)
+        Tinybit.CarCtrlSpeed(Tinybit.CarState.Car_Run, 145)
+    } else if (Tinybit.Ultrasonic_Car() < 75) {
+        Tinybit.CarCtrl(Tinybit.CarState.Car_Run)
+        Tinybit.CarCtrlSpeed(Tinybit.CarState.Car_Run, 255)
     } else {
         Tinybit.CarCtrl(Tinybit.CarState.Car_Run)
         Tinybit.CarCtrlSpeed(Tinybit.CarState.Car_Run, 255)
-    }
-})
-basic.forever(function () {
-    if (input.lightLevel() < 50) {
-        Tinybit.CarCtrl(Tinybit.CarState.Car_Stop)
+        if (!(input.compassHeading() == 0)) {
+            Tinybit.CarCtrl(Tinybit.CarState.Car_Right)
+        }
     }
 })
